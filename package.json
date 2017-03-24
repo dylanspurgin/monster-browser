@@ -7,7 +7,8 @@
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "npm run server"
+    "start": "npm run server",
+    "release": "npm run build && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -48,7 +49,7 @@
     "phantomjs-prebuilt": "^2.1.4",
     "postcss-loader": "1.2.2",
     "raw-loader": "^0.5.1",
-    "rimraf": "^2.5.1",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.13.0",
     "webpack": "2.2.0",
     "webpack-dev-server": "2.2.0"
