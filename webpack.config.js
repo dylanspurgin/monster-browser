@@ -167,7 +167,7 @@ module.exports = function makeWebpackConfig() {
     config.plugins.push(
       new HtmlWebpackPlugin({
         template: './src/index.ejs',
-        baseUrl: isProd ? '/dist/' : '/',
+        baseUrl: isProd ? '/monster-browser/' : '/',
         inject: 'body'
       }),
 
