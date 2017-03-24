@@ -1,3 +1,4 @@
+MonsterListController.$inject = ['Monsters'];
 function MonsterListController (Monsters) {
     this.monsters = Monsters;
 }

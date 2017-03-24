@@ -1,3 +1,4 @@
+import {monstersService} from './monsters/monsters.service';
 
 export const appState = {
     name: 'app',
@@ -18,8 +19,8 @@ export const monsterDetailState = {
     url: '/:monsterId',
     component: 'monsterDetail',
     resolve: {
-        monster: ($transition$, monstersService) => {
+        monster: ['$transition$', 'monstersService', function ($transition$, monstersService) {
             return monstersService.getById($transition$.params().monsterId);
-        }
+        }]
     }
 };
