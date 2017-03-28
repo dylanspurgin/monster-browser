@@ -1,5 +1,5 @@
 const template = require('./monster-list.html');
-require('./monster-list.scss');
+require('./_monster-list.scss');
 
 MonsterListController.$inject = ['Monsters'];
 function MonsterListController (Monsters) {

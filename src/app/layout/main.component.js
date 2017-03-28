@@ -1,14 +1,14 @@
-const template = require('./app.html');
-require ('./app.scss');
+const template = require('./main.html');
+require('./_main.scss');
 
-function AppController () {
+function MainController () {
     this.siteMeta = {
         title: 'Monster Browser',
         description: 'A component-based Angular 1.6 app disguised as a monster browser. With artwork by my daughter, Annalouise.'
     }
 }
 
-export const app = {
-    controller: AppController,
+export const main = {
+    controller: MainController,
     templateUrl: template
 }

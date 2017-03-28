@@ -3,7 +3,7 @@ import {monstersService} from './monsters/monsters.service';
 export const appState = {
     name: 'app',
     redirectTo: 'monsterList',
-    component: 'app'
+    component: 'main'
 };
 
 export const monsterListState = {

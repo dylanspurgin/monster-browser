@@ -84,17 +84,7 @@ module.exports = function makeWebpackConfig() {
                 loader: 'babel-loader',
                 exclude: /node_modules/
             }, {
-                // CSS LOADER
-                // Reference: https://github.com/webpack/css-loader
-                // Allow loading css through js
-                //
                 test: /\.scss$/,
-                // Reference: https://github.com/webpack/extract-text-webpack-plugin
-                // Extract css files in production builds
-                //
-                // Reference: https://github.com/webpack/style-loader
-                // Use style-loader in development.
-
                 loader: isTest ? 'style-loader' : extractSass.extract({
                     loader: [{
                             loader: 'css-loader',
@@ -107,6 +97,15 @@ module.exports = function makeWebpackConfig() {
                             options: {
                                 sourceMap: true
                             }
+                        },
+                        {
+                            loader: 'sass-resources-loader',
+                            query: {
+                                resources: [
+                                    '~sass-lumen/sass/_lumen.scss',
+                                    './src/app/style/vars.scss'
+                                ]
+                            },
                         }
                     ],
                 })
