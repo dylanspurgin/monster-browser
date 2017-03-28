@@ -1,0 +1,20 @@
+<div class="row">
+    <!-- left hand nav -->
+    <div class="col-xs-2 col-md-4">
+        <h1>Monsters</h1>
+        <ul>
+          <li ng-repeat="monster in $ctrl.monsters" ui-sref-active="userselected">
+            <a ui-sref="monsterDetail({ monsterId: monster.id })"
+                ng-disabled="!monster.active"
+                ng-class="{ deactivated: !monster.active }">
+              {{ monster.name }}
+            </a>
+          </li>
+        </ul>
+    </div>
+
+    <!-- content -->
+    <div class="col-xs-10 col-md-8">
+        <ui-view>Click on a monster name to see details</ui-view>
+    </div>
+</div>

@@ -4,7 +4,7 @@ import uiRouter from 'angular-ui-router';
 import {monsters} from './monsters/monsters.constants';
 import {monstersService} from './monsters/monsters.service';
 
-import {app} from './app.component';
+import {app} from './layout/app.component';
 import {monsterList} from './monster-list/monster-list.component';
 import {monsterDetail} from './monster-detail/monster-detail.component';
 import {appState, monsterListState, monsterDetailState} from './app.states';
