@@ -88,13 +88,13 @@ module.exports = function makeWebpackConfig() {
                 loader: isTest ? 'style-loader' : extractSass.extract({
                     loader: [{
                             loader: 'css-loader',
-                            options: {
+                            query: {
                                 sourceMap: true
                             }
                         },
                         {
                             loader: 'sass-loader',
-                            options: {
+                            query: {
                                 sourceMap: true
                             }
                         },
@@ -102,7 +102,10 @@ module.exports = function makeWebpackConfig() {
                             loader: 'sass-resources-loader',
                             query: {
                                 resources: [
-                                    '~sass-lumen/sass/_lumen.scss',
+                                    './node_modules/sass-lumen/sass/_introspection.scss',
+                                    './node_modules/sass-lumen/sass/_harmony.scss',
+                                    './node_modules/sass-lumen/sass/_tint-shade.scss',
+                                    './src/app/style/_neutral.scss',
                                     './src/app/style/vars.scss'
                                 ]
                             },

@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    color: $black !important;
+}
+
+layout {
+
+    header {
+        background-color: $brand-secondary-neutral-light;
+        h1 {
+            color: $brand-primary;
+            font-size: $font-size--site-title;
+            text-transform: uppercase;
+        }
+    }
+
+    main {
+        background-color: $white;
+    }
+
+    .container-fluid {
+        padding-left: $container-padding-left;
+        padding-right: $container-padding-right;
+    }
+}

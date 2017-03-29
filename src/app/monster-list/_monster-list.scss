@@ -1,3 +1,5 @@
-monster-list h1 {
-    color: $first-color;
+monster-list {
+    li a {
+        color: $brand-secondary;
+    }
 }

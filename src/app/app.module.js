@@ -6,7 +6,7 @@ require('./style/app.scss'); // Main app stylesheet
 import {monsters} from './monsters/monsters.constants';
 import {monstersService} from './monsters/monsters.service';
 
-import {main} from './layout/main.component';
+import {layout} from './layout/layout.component';
 import {monsterList} from './monster-list/monster-list.component';
 import {monsterDetail} from './monster-detail/monster-detail.component';
 import {appState, monsterListState, monsterDetailState} from './app.states';
@@ -17,7 +17,8 @@ const appModule = angular.module('appModule', [uiRouter]);
 appModule.constant('Monsters', monsters);
 appModule.factory('monstersService', monstersService);
 
-appModule.component('main', main);
+// TODO - Register components in the component directories
+appModule.component('layout', layout);
 appModule.component('monsterList', monsterList);
 appModule.component('monsterDetail', monsterDetail);
 

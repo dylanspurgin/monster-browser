@@ -1,4 +1,25 @@
-// @import '~sass-lumen/sass/_lumen.scss';
-//
-$first-color: hsl(50, 100%, 50%);
+$starting-hue: 320;
+$first-color: hsl($starting-hue, 100%, 50%);
 $second-color: complement($first-color);
+
+
+$brand-primary: harmonize($second-color, $first-color);
+$brand-primary-neutral: neutral($brand-primary);
+$brand-primary-neutral-light: lighten($brand-primary, 25%);
+$brand-primary-neutral-dark: darken($brand-primary, 25%);
+
+
+$brand-secondary: harmonize($first-color, $second-color);
+$brand-secondary-neutral: neutral($brand-secondary);
+$brand-secondary-neutral-light: lighten($brand-secondary, 25%);
+$brand-secondary-neutral-dark: darken($brand-secondary, 25%);
+
+$black: darken($brand-primary, 38%);
+$white: lighten($brand-primary, 48%);
+
+
+$container-padding-left: 40px;
+$container-padding-right: 40px;
+
+
+$font-size--site-title: 18px;
