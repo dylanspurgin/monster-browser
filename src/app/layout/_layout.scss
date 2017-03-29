@@ -1,26 +1,83 @@
-html, body {
-    height: 100%;
-    width: 100%;
+$header-height: 60px;
+$footer-height: 40px;
+
+html {
+    position: relative;
+    min-height: 100%;
+
+    body {
+
+        font-size: $font-size-medium;
+
+        margin-bottom: $footer-height; // Height of footer
+
+        a, a:hover {
+            color: $brand-secondary-neutral;
+        }
+    }
+}
+
+body,
+html {
     color: $black !important;
+    background-color: $white !important;
+
+    & > div {}
 }
 
 layout {
-
     header {
-        background-color: $brand-secondary-neutral-light;
-        h1 {
-            color: $brand-primary;
-            font-size: $font-size--site-title;
-            text-transform: uppercase;
+        background-color: $brand-primary-neutral-dark;
+
+        .top-nav {
+            height: $header-height;
+
+            h1 {
+                color: $brand-primary-neutral-light;
+                font-size: $font-size-medium;
+                text-transform: uppercase;
+            }
+
+            nav {
+
+                ul {
+                    float: right;
+                    list-style-type: none;
+                    line-height: $header-height;
+                }
+            }
         }
+
+        .lead-in {
+            background-color: $brand-primary-neutral-light;
+            color: $brand-primary-neutral-dark;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
     }
 
     main {
-        background-color: $white;
+        background-color: inherit;
     }
 
     .container-fluid {
         padding-left: $container-padding-left;
         padding-right: $container-padding-right;
+    }
+}
+
+body footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: $footer-height;
+    line-height: $footer-height;
+    background-color: $brand-primary-neutral-dark;
+
+    a, a:hover {
+        color: $brand-primary-neutral-light;
     }
 }

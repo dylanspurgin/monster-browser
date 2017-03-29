@@ -1,5 +1,67 @@
 monster-list {
-    li a {
-        color: $brand-secondary;
+    display: block;
+    height: 100%;
+
+    div.monster-nav {
+        height: 100%;
+        padding-top: $content-padding-top;
+        margin-left: -$container-padding-left;
+
+        ul {
+            height: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            .monster-list-heading {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: $font-size-large;
+            }
+
+            li {
+
+                a {
+                    display: block;
+                    padding: 6px 0 6px 14px;
+                    background-color: $brand-secondary-neutral-light;
+                    color: $brand-secondary-neutral-dark;
+                }
+                a:hover {
+                    text-decoration: none;
+                    color: $brand-secondary-neutral-dark;
+                    background-color: $brand-secondary-neutral;
+                }
+                span {
+                    display: none;
+                }
+            }
+
+            li.active {
+
+                a {
+                    display: none;
+                }
+                span {
+                    display: block;
+                    padding: 6px 0 6px 14px;
+                    font-weight: bold;
+                    color: $brand-secondary-neutral-light;
+                    background-color: $brand-secondary-neutral-dark;
+                }
+            }
+
+        }
+
+    }
+
+
+    div.monster-content {
+        padding-top: $content-padding-top;
+    }
+
+    div.monster-content--empty-state {
+        padding-top: $content-padding-top;
+        text-align: center;
     }
 }

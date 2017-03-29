@@ -1,0 +1,61 @@
+monster-detail {
+    .monster-details-card {
+        border: solid 2px $brand-primary-neutral-dark;
+
+        .monster-details-card-header {
+            background-color: $brand-primary-neutral-dark;
+            color: $brand-primary-neutral-light;
+            padding: 20px 14px 10px;
+        }
+
+        dl {
+            padding: 20px 14px 10px;
+        }
+
+        dd {
+            margin-bottom: 8px;
+        }
+    }
+
+    // From https://www.sitepoint.com/pure-css3-paper-curls/
+    .paper {
+        position: relative;
+    	width: 500px;
+    	padding: 50px;
+    	background-color: #fff;
+    	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    }
+
+    .paper:after,
+    .paper:before {
+        position: absolute;
+        width: 40%;
+        height: 10px;
+        content: ' ';
+        left: 12px;
+        bottom: 12px;
+        background: transparent;
+        -webkit-transform: skew(-5deg) rotate(-5deg);
+        -moz-transform: skew(-5deg) rotate(-5deg);
+        -ms-transform: skew(-5deg) rotate(-5deg);
+        -o-transform: skew(-5deg) rotate(-5deg);
+        transform: skew(-5deg) rotate(-5deg);
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    }
+
+    .paper:after {
+        left: auto;
+        right: 12px;
+        -webkit-transform: skew(5deg) rotate(5deg);
+        -moz-transform: skew(5deg) rotate(5deg);
+        -ms-transform: skew(5deg) rotate(5deg);
+        -o-transform: skew(5deg) rotate(5deg);
+        transform: skew(5deg) rotate(5deg);
+    }
+
+}

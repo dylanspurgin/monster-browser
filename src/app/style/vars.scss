@@ -1,25 +1,49 @@
-$starting-hue: 320;
-$first-color: hsl($starting-hue, 100%, 50%);
+/*
+ * Colors
+ */
+$red: 	 hsl(355, 100%, 50%);
+$orange: hsl(20, 100%, 50%);
+$yellow: hsl(60, 100%, 50%);
+$green:  hsl(120, 100%, 50%);
+$cyan:   hsl(180, 100%, 50%);
+$blue:   hsl(240, 100%, 50%);
+$violet: hsl(300, 100%, 50%);
+
+// Starting colors
+$first-color: $green;
 $second-color: complement($first-color);
 
-
-$brand-primary: harmonize($second-color, $first-color);
+// Primary shades
+$brand-primary: harmonize($first-color, $second-color);
 $brand-primary-neutral: neutral($brand-primary);
-$brand-primary-neutral-light: lighten($brand-primary, 25%);
-$brand-primary-neutral-dark: darken($brand-primary, 25%);
+$brand-primary-neutral-light: lighten($brand-primary-neutral, 35%);
+$brand-primary-neutral-dark: darken($brand-primary-neutral, 35%);
 
-
-$brand-secondary: harmonize($first-color, $second-color);
+// Secondary shades
+$brand-secondary: harmonize($second-color, $first-color);
 $brand-secondary-neutral: neutral($brand-secondary);
-$brand-secondary-neutral-light: lighten($brand-secondary, 25%);
-$brand-secondary-neutral-dark: darken($brand-secondary, 25%);
+$brand-secondary-neutral-light: lighten($brand-secondary-neutral, 35%);
+$brand-secondary-neutral-dark: darken($brand-secondary-neutral, 35%);
 
-$black: darken($brand-primary, 38%);
-$white: lighten($brand-primary, 48%);
+// Black & white
+$black: darken($brand-primary-neutral, 38%);
+$white: lighten($brand-primary-neutral, 44%);
 
 
+
+/*
+ * Text
+ */
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 20px;
+
+
+
+/*
+ * Layout
+ */
 $container-padding-left: 40px;
 $container-padding-right: 40px;
 
-
-$font-size--site-title: 18px;
+$content-padding-top: 20px;

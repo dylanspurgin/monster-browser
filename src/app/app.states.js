@@ -3,14 +3,16 @@ import {monstersService} from './monsters/monsters.service';
 export const appState = {
     name: 'app',
     redirectTo: 'monsterList',
-    component: 'layout'
+    component: 'layout',
+    transclude: true
 };
 
 export const monsterListState = {
     name: 'monsterList',
     parent: 'app',
     url: '/monsters',
-    component: 'monsterList'
+    component: 'monsterList',
+    transclude: true
 };
 
 export const monsterDetailState = {

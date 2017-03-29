@@ -1,21 +1,29 @@
 <div class="row">
 
     <!-- left hand nav -->
-    <div class="col-xs-2 col-md-4">
+    <div class="col-xs-3 col-md-2 monster-nav">
         <ul>
-            <lh>Monsters</lh>
-            <li ng-repeat="monster in $ctrl.monsters" ui-sref-active="userselected">
+            <div class="monster-list-heading">Monsters</div>
+            <li ng-repeat="monster in $ctrl.monsters" ui-sref-active="active">
                 <a ui-sref="monsterDetail({ monsterId: monster.id })"
                     ng-disabled="!monster.active"
                     ng-class="{ deactivated: !monster.active }">
-              {{ monster.name }}
-            </a>
+                    {{ monster.name }}
+                </a>
+                <span>
+                    {{ monster.name }}
+                </span>
             </li>
         </ul>
     </div>
 
     <!-- content -->
-    <div class="col-xs-10 col-md-8">
-        <ui-view>Click on a monster name to see details</ui-view>
+    <div class="col-xs-9 col-md-10 monster-content">
+        <ui-view>
+            <div class="monster-content--empty-state">
+                <h4>Looking for details of cool monsters?</h4>
+                <p>Get started by clicking on a monster name on the left hand side.</p>
+            </div>
+        </ui-view>
     </div>
 </div>

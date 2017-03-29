@@ -6,6 +6,13 @@ function LayoutController () {
         title: 'Monster Browser',
         description: 'A component-based Angular 1.6 app disguised as a monster browser. With artwork by my daughter, Annalouise.'
     }
+
+    this.menuItems = [
+        {
+            text: 'browse on github',
+            href: 'https://github.com/dylanspurgin/monster-browser'
+        }
+    ]
 }
 
 export const layout = {
