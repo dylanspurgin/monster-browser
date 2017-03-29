@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 79);
+/******/ 	return __webpack_require__(__webpack_require__.s = 86);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1017,17 +1017,17 @@ exports.services = services;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(65));
 __export(__webpack_require__(72));
-__export(__webpack_require__(73));
-__export(__webpack_require__(74));
-__export(__webpack_require__(75));
-__export(__webpack_require__(76));
-__export(__webpack_require__(77));
-__export(__webpack_require__(78));
+__export(__webpack_require__(79));
+__export(__webpack_require__(80));
+__export(__webpack_require__(81));
+__export(__webpack_require__(82));
+__export(__webpack_require__(83));
+__export(__webpack_require__(84));
+__export(__webpack_require__(85));
 __export(__webpack_require__(30));
 __export(__webpack_require__(35));
-__export(__webpack_require__(71));
+__export(__webpack_require__(78));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -3146,7 +3146,7 @@ exports.UrlMatcher = UrlMatcher;
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(64);
+__webpack_require__(65);
 module.exports = angular;
 
 
@@ -3170,11 +3170,11 @@ module.exports = angular;
 var angular_1 = __webpack_require__(7);
 var ui_router_core_1 = __webpack_require__(4);
 var views_1 = __webpack_require__(21);
-var templateFactory_1 = __webpack_require__(61);
+var templateFactory_1 = __webpack_require__(62);
 var stateProvider_1 = __webpack_require__(29);
-var onEnterExitRetain_1 = __webpack_require__(60);
-var locationServices_1 = __webpack_require__(58);
-var urlRouterProvider_1 = __webpack_require__(62);
+var onEnterExitRetain_1 = __webpack_require__(61);
+var locationServices_1 = __webpack_require__(59);
+var urlRouterProvider_1 = __webpack_require__(63);
 angular_1.ng.module("ui.router.angular1", []);
 var mod_init = angular_1.ng.module('ui.router.init', []);
 var mod_util = angular_1.ng.module('ui.router.util', ['ng', 'ui.router.init']);
@@ -4434,11 +4434,11 @@ exports.Transition = Transition;
 var interface_1 = __webpack_require__(11);
 var transition_1 = __webpack_require__(26);
 var hookRegistry_1 = __webpack_require__(25);
-var resolve_1 = __webpack_require__(68);
-var views_1 = __webpack_require__(70);
-var url_1 = __webpack_require__(69);
-var redirectTo_1 = __webpack_require__(67);
-var onEnterExitRetain_1 = __webpack_require__(66);
+var resolve_1 = __webpack_require__(75);
+var views_1 = __webpack_require__(77);
+var url_1 = __webpack_require__(76);
+var redirectTo_1 = __webpack_require__(74);
+var onEnterExitRetain_1 = __webpack_require__(73);
 var lazyLoad_1 = __webpack_require__(31);
 var transitionEventType_1 = __webpack_require__(42);
 var transitionHook_1 = __webpack_require__(13);
@@ -7645,36 +7645,17 @@ __export(__webpack_require__(4));
 __export(__webpack_require__(20));
 __export(__webpack_require__(21));
 __export(__webpack_require__(29));
-__webpack_require__(57);
-__webpack_require__(55);
-__webpack_require__(59);
+__webpack_require__(58);
 __webpack_require__(56);
-__webpack_require__(63);
+__webpack_require__(60);
+__webpack_require__(57);
+__webpack_require__(64);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = "ui.router";
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 /* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-function AppController() {
-    // no op
-}
-
-var app = exports.app = {
-    controller: AppController,
-    template: "<div ui-view></div>"
-};
-
-/***/ }),
-/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7692,7 +7673,7 @@ var html5ModeConfigBlock = exports.html5ModeConfigBlock = ['$locationProvider', 
 }];
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7708,14 +7689,16 @@ var _monsters = __webpack_require__(28);
 var appState = exports.appState = {
     name: 'app',
     redirectTo: 'monsterList',
-    component: 'app'
+    component: 'layout',
+    transclude: true
 };
 
 var monsterListState = exports.monsterListState = {
     name: 'monsterList',
     parent: 'app',
     url: '/monsters',
-    component: 'monsterList'
+    component: 'monsterList',
+    transclude: true
 };
 
 var monsterDetailState = exports.monsterDetailState = {
@@ -7731,6 +7714,36 @@ var monsterDetailState = exports.monsterDetailState = {
 };
 
 /***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var template = __webpack_require__(69);
+__webpack_require__(66);
+
+function LayoutController() {
+    this.siteMeta = {
+        title: 'Monster Browser',
+        description: 'A component-based Angular 1.6 app disguised as a monster browser. With artwork by my daughter, Annalouise.'
+    };
+
+    this.menuItems = [{
+        text: 'browse on github',
+        href: 'https://github.com/dylanspurgin/monster-browser'
+    }];
+}
+
+var layout = exports.layout = {
+    controller: LayoutController,
+    templateUrl: template
+};
+
+/***/ }),
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7740,6 +7753,9 @@ var monsterDetailState = exports.monsterDetailState = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+var template = __webpack_require__(70);
+__webpack_require__(67);
+
 function MonsterDetailController() {
     // no op
 }
@@ -7749,7 +7765,7 @@ var monsterDetail = exports.monsterDetail = {
     bindings: {
         monster: '<'
     },
-    template: '\n    <dl>\n        <dt>Name</dt>\n        <dd>{{$ctrl.monster.name}}</dd>\n        <dt>Age</dt>\n        <dd>{{$ctrl.monster.age}}</dd>\n        <dt>Origin</dt>\n        <dd>{{$ctrl.monster.origin}}</dd>\n        <dt>Description</dt>\n        <dd>{{$ctrl.monster.description}}</dd>\n    </dl>\n    <img src="{{$ctrl.monster.image}}" width="400"/>\n  '
+    templateUrl: template
 };
 
 /***/ }),
@@ -7760,16 +7776,19 @@ var monsterDetail = exports.monsterDetail = {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
+var template = __webpack_require__(71);
+__webpack_require__(68);
+
 MonsterListController.$inject = ['Monsters'];
 function MonsterListController(Monsters) {
-  this.monsters = Monsters;
+    this.monsters = Monsters;
 }
 
 var monsterList = exports.monsterList = {
-  controller: MonsterListController,
-  template: '\n    <h1>Monsters</h1>\n    <ul>\n      <li ng-repeat="monster in $ctrl.monsters" ui-sref-active="userselected">\n        <a ui-sref="monsterDetail({ monsterId: monster.id })"\n            ng-disabled="!monster.active"\n            ng-class="{ deactivated: !monster.active }">\n          {{ monster.name }}\n        </a>\n      </li>\n    </ul>\n\n    <div ui-view>Click on a monster name to see details</div>\n  '
+    controller: MonsterListController,
+    templateUrl: template
 };
 
 /***/ }),
@@ -7807,6 +7826,12 @@ var monsters = exports.monsters = [{
 
 /***/ }),
 /* 55 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8340,7 +8365,7 @@ angular_1.ng.module('ui.router.state')
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8743,7 +8768,7 @@ angular_1.ng.module('ui.router.state').directive('uiView', $ViewDirectiveFill);
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9106,7 +9131,7 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9186,7 +9211,7 @@ exports.Ng1LocationServices = Ng1LocationServices;
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9235,7 +9260,7 @@ angular_1.ng.module('ui.router.state')
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9265,7 +9290,7 @@ exports.getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9457,7 +9482,7 @@ var scopeBindings = function (bindingsObj) { return Object.keys(bindingsObj || {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9666,7 +9691,7 @@ exports.UrlRouterProvider = UrlRouterProvider;
 //# sourceMappingURL=urlRouterProvider.js.map
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9694,7 +9719,7 @@ angular_1.ng.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProv
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports) {
 
 /**
@@ -43044,7 +43069,52 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 65 */
+/* 66 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports) {
+
+var path = '/Users/dylan/dev/monster-browser/src/app/layout/layout.html';
+var html = "<header>\n    <div class=\"container-fluid top-nav\">\n        <div class=\"row\">\n            <div class=\"col-xs-4\">\n                <h1>{{$ctrl.siteMeta.title}}</h1>\n            </div>\n            <div class=\"col-xs-8\">\n                <nav>\n                    <ul>\n                        <li ng-repeat=\"item in $ctrl.menuItems\">\n                            <a href=\"{{item.href}}\">{{item.text}}</a>\n                        </li>\n                    </ul>\n                </nav>\n            </div>\n        </div>\n    </div>\n    <div class=\"lead-in container-fluid\">\n        <span>{{$ctrl.siteMeta.description}}</span>\n    </div>\n</header>\n<main>\n    <div ui-view class=\"container-fluid\"></div>\n</main>\n<footer class=\"container-fluid\">\n    <a href=\"https://github.com/dylanspurgin/monster-browser\">monster-browser</a>\n</footer>\n";
+window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
+module.exports = path;
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports) {
+
+var path = '/Users/dylan/dev/monster-browser/src/app/monster-detail/monster-detail.html';
+var html = "<div class=\"row\">\n    <div class=\"col-xs-8\">\n        <div class=\"paper\">\n            <img src=\"{{$ctrl.monster.image}}\" width=\"400\" />\n        </div>\n    </div>\n    <div class=\"col-xs-4\">\n        <div class=\"monster-details-card\">\n            <div class=\"monster-details-card-header\">\n                <span>{{$ctrl.monster.name}}</span>\n            </div>\n            <dl>\n                <dt>Age</dt>\n                <dd>{{$ctrl.monster.age}}</dd>\n                <dt>Origin</dt>\n                <dd>{{$ctrl.monster.origin}}</dd>\n                <dt>Description</dt>\n                <dd>{{$ctrl.monster.description}}</dd>\n            </dl>\n        </div>\n    </div>\n</div>\n";
+window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
+module.exports = path;
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports) {
+
+var path = '/Users/dylan/dev/monster-browser/src/app/monster-list/monster-list.html';
+var html = "<div class=\"row\">\n\n    <!-- left hand nav -->\n    <div class=\"col-xs-3 col-md-2 monster-nav\">\n        <ul>\n            <div class=\"monster-list-heading\">Monsters</div>\n            <li ng-repeat=\"monster in $ctrl.monsters\" ui-sref-active=\"active\">\n                <a ui-sref=\"monsterDetail({ monsterId: monster.id })\"\n                    ng-disabled=\"!monster.active\"\n                    ng-class=\"{ deactivated: !monster.active }\">\n                    {{ monster.name }}\n                </a>\n                <span>\n                    {{ monster.name }}\n                </span>\n            </li>\n        </ul>\n    </div>\n\n    <!-- content -->\n    <div class=\"col-xs-9 col-md-10 monster-content\">\n        <ui-view>\n            <div class=\"monster-content--empty-state\">\n                <h4>Looking for details of cool monsters?</h4>\n                <p>Get started by clicking on a monster name on the left hand side.</p>\n            </div>\n        </ui-view>\n    </div>\n</div>\n";
+window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
+module.exports = path;
+
+/***/ }),
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43064,7 +43134,7 @@ __export(__webpack_require__(8));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 66 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43125,7 +43195,7 @@ exports.registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 67 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43167,7 +43237,7 @@ exports.registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 68 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43214,7 +43284,7 @@ exports.registerLazyResolveState = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 69 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43244,7 +43314,7 @@ exports.registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 70 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43296,7 +43366,7 @@ exports.registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 71 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43321,7 +43391,7 @@ exports.UIRouterPluginBase = UIRouterPluginBase;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 72 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43336,7 +43406,7 @@ __export(__webpack_require__(23));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 73 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43350,7 +43420,7 @@ __export(__webpack_require__(16));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 74 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43365,7 +43435,7 @@ __export(__webpack_require__(17));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 75 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43383,7 +43453,7 @@ __export(__webpack_require__(6));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 76 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43414,7 +43484,7 @@ __export(__webpack_require__(27));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 77 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43430,7 +43500,7 @@ __export(__webpack_require__(46));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 78 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43442,7 +43512,7 @@ __export(__webpack_require__(47));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 79 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43460,38 +43530,41 @@ var _monsters = __webpack_require__(54);
 
 var _monsters2 = __webpack_require__(28);
 
-var _app = __webpack_require__(49);
+var _layout = __webpack_require__(51);
 
 var _monsterList = __webpack_require__(53);
 
 var _monsterDetail = __webpack_require__(52);
 
-var _app2 = __webpack_require__(51);
+var _app = __webpack_require__(50);
 
-var _app3 = __webpack_require__(50);
+var _app2 = __webpack_require__(49);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+__webpack_require__(55); // Main app stylesheet
 
 var appModule = angular.module('appModule', [_angularUiRouter2.default]);
 
 appModule.constant('Monsters', _monsters.monsters);
 appModule.factory('monstersService', _monsters2.monstersService);
 
-appModule.component('app', _app.app);
+// TODO - Register components in the component directories
+appModule.component('layout', _layout.layout);
 appModule.component('monsterList', _monsterList.monsterList);
 appModule.component('monsterDetail', _monsterDetail.monsterDetail);
 
 appModule.config(['$stateProvider', function ($stateProvider) {
-    $stateProvider.state(_app2.appState);
-    $stateProvider.state(_app2.monsterListState);
-    $stateProvider.state(_app2.monsterDetailState);
+    $stateProvider.state(_app.appState);
+    $stateProvider.state(_app.monsterListState);
+    $stateProvider.state(_app.monsterDetailState);
 }]);
 
-appModule.config(_app3.otherwiseConfigBlock);
-appModule.config(_app3.html5ModeConfigBlock);
+appModule.config(_app2.otherwiseConfigBlock);
+appModule.config(_app2.html5ModeConfigBlock);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.a17f2c57e9c498c32b37.js.map
+//# sourceMappingURL=app.f4b12c27c1ce9704448a.js.map
