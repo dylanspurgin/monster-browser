@@ -1,27 +1,23 @@
 <header>
-    <div class="container-fluid top-nav">
-        <div class="row">
-            <div class="col-xs-4">
-                <h1>{{$ctrl.siteMeta.title}}</h1>
-            </div>
-            <div class="col-xs-8">
-                <nav>
-                    <ul>
-                        <li ng-repeat="item in $ctrl.menuItems">
-                            <a href="{{item.href}}">{{item.text}}</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="top-nav">
+        <div>
+            <h1>{{$ctrl.siteMeta.title}}</h1>
         </div>
+        <nav>
+            <ul>
+                <li ng-repeat="item in $ctrl.menuItems">
+                    <a href="{{item.href}}">{{item.text}}</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <div class="lead-in container-fluid">
+    <div class="lead-in">
         <span>{{$ctrl.siteMeta.description}}</span>
     </div>
 </header>
 <main>
-    <div ui-view class="container-fluid"></div>
+    <div ui-view></div>
 </main>
-<footer class="container-fluid">
+<footer>
     <a href="https://github.com/dylanspurgin/monster-browser">monster-browser</a>
 </footer>

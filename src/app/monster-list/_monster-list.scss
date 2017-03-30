@@ -1,11 +1,11 @@
 monster-list {
-    display: block;
+    display: flex;
+    flex-direction: row;
     height: 100%;
 
     div.monster-nav {
-        height: 100%;
+        min-width: $monster-list-width;
         padding-top: $content-padding-top;
-        margin-left: -$container-padding-left;
 
         ul {
             height: 100%;
@@ -17,15 +17,18 @@ monster-list {
                 text-transform: uppercase;
                 text-align: center;
                 font-size: $font-size-large;
+                padding-bottom: 8px;
             }
 
             li {
 
                 a {
                     display: block;
-                    padding: 6px 0 6px 14px;
+                    text-decoration: none;
+                    padding: 10px 0 10px $site-padding-left;
                     background-color: $brand-secondary-neutral-light;
                     color: $brand-secondary-neutral-dark;
+                    border-bottom: solid 1px $brand-secondary-neutral;
                 }
                 a:hover {
                     text-decoration: none;
@@ -37,6 +40,10 @@ monster-list {
                 }
             }
 
+            li:last-of-type a {
+                border-bottom: none;
+            }
+
             li.active {
 
                 a {
@@ -44,10 +51,11 @@ monster-list {
                 }
                 span {
                     display: block;
-                    padding: 6px 0 6px 14px;
+                    padding: 10px 0 10px $site-padding-left;
                     font-weight: bold;
                     color: $brand-secondary-neutral-light;
                     background-color: $brand-secondary-neutral-dark;
+                    border-bottom: solid 1px $brand-secondary-neutral-dark;
                 }
             }
 

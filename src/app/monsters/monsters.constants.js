@@ -16,8 +16,8 @@ export const monsters = [
         image: './img/monsters/delocdago.png'
     },
     {
-        id: 'stary-eye',
-        name: 'Stary Eye',
+        id: 'starry-eye',
+        name: 'Starry Eye',
         age: 40,
         origin: 'Austin',
         description: 'Shoots out stars from its eyes.',

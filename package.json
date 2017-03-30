@@ -24,7 +24,6 @@
     "angular": "1.6.3",
     "angular-ui-router": "1.0.0-rc.1",
     "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7",
     "sass-lumen": "^0.0.1"
   },
   "devDependencies": {

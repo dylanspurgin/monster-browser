@@ -6,23 +6,8 @@ html {
     min-height: 100%;
 
     body {
-
-        font-size: $font-size-medium;
-
-        margin-bottom: $footer-height; // Height of footer
-
-        a, a:hover {
-            color: $brand-secondary-neutral;
-        }
+        margin-bottom: $footer-height; // Height of sticky footer
     }
-}
-
-body,
-html {
-    color: $black !important;
-    background-color: $white !important;
-
-    & > div {}
 }
 
 layout {
@@ -30,18 +15,26 @@ layout {
         background-color: $brand-primary-neutral-dark;
 
         .top-nav {
-            height: $header-height;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
 
-            h1 {
-                color: $brand-primary-neutral-light;
-                font-size: $font-size-medium;
-                text-transform: uppercase;
+            height: $header-height;
+            line-height: $header-height;
+
+            padding-left: $site-padding-left;
+            padding-right: $site-padding-right;
+
+            div {
+                h1 {
+                    color: $brand-primary-neutral-light;
+                    font-size: $font-size-large;
+                    text-transform: uppercase;
+                }
             }
 
             nav {
-
                 ul {
-                    float: right;
                     list-style-type: none;
                     line-height: $header-height;
                 }
@@ -53,31 +46,30 @@ layout {
             color: $brand-primary-neutral-dark;
             padding-top: 20px;
             padding-bottom: 20px;
+            padding-left: $site-padding-left;
+            padding-right: $site-padding-right;
             text-align: center;
         }
 
     }
 
     main {
-        background-color: inherit;
+        padding-right: $site-padding-right;
     }
 
-    .container-fluid {
-        padding-left: $container-padding-left;
-        padding-right: $container-padding-right;
-    }
-}
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-left: $site-padding-left;
+        padding-right: $site-padding-right;
+        height: $footer-height;
+        line-height: $footer-height;
+        background-color: $brand-primary-neutral-dark;
 
-body footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: $footer-height;
-    line-height: $footer-height;
-    background-color: $brand-primary-neutral-dark;
-
-    a, a:hover {
-        color: $brand-primary-neutral-light;
+        a, a:hover {
+            color: $brand-primary-neutral-light;
+        }
     }
+
 }

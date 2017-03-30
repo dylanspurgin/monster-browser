@@ -1,4 +1,11 @@
 monster-detail {
+    display: flex;
+    flex-direction: row;
+
+    &>div:first-of-type {
+        padding: 0 20px 20px 20px;
+    }
+
     .monster-details-card {
         border: solid 2px $brand-primary-neutral-dark;
 
@@ -10,17 +17,23 @@ monster-detail {
 
         dl {
             padding: 20px 14px 10px;
+            dt {
+                margin-bottom: 6px;
+                font-size: $font-size-large;
+                font-weight: bold;
+            }
+            dd {
+                margin-bottom: 14px;
+            }
         }
 
-        dd {
-            margin-bottom: 8px;
-        }
+
     }
 
     // From https://www.sitepoint.com/pure-css3-paper-curls/
     .paper {
         position: relative;
-    	width: 500px;
+    	// width: 70%;
     	padding: 50px;
     	background-color: #fff;
     	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);

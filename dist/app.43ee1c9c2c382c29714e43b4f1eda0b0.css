@@ -1,0 +1,227 @@
+/*
+ * Colors
+ */
+/*
+ * Text
+ */
+/*
+ * Layout
+ */
+html {
+  position: relative;
+  min-height: 100%; }
+  html body {
+    margin-bottom: 40px; }
+
+layout header {
+  background-color: #153815; }
+  layout header .top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 40px;
+    padding-right: 40px; }
+    layout header .top-nav div h1 {
+      color: #c7eac7;
+      font-size: 20px;
+      text-transform: uppercase; }
+    layout header .top-nav nav ul {
+      list-style-type: none;
+      line-height: 60px; }
+  layout header .lead-in {
+    background-color: #c7eac7;
+    color: #153815;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center; }
+
+layout main {
+  padding-right: 40px; }
+
+layout footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #153815; }
+  layout footer a, layout footer a:hover {
+    color: #c7eac7; }
+/*
+ * Colors
+ */
+/*
+ * Text
+ */
+/*
+ * Layout
+ */
+monster-list {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+  monster-list div.monster-nav {
+    min-width: 200px;
+    padding-top: 20px; }
+    monster-list div.monster-nav ul {
+      height: 100%;
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      monster-list div.monster-nav ul .monster-list-heading {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 8px; }
+      monster-list div.monster-nav ul li a {
+        display: block;
+        text-decoration: none;
+        padding: 10px 0 10px 40px;
+        background-color: #e8cae8;
+        color: #351735;
+        border-bottom: solid 1px #b14eb1; }
+      monster-list div.monster-nav ul li a:hover {
+        text-decoration: none;
+        color: #351735;
+        background-color: #b14eb1; }
+      monster-list div.monster-nav ul li span {
+        display: none; }
+      monster-list div.monster-nav ul li:last-of-type a {
+        border-bottom: none; }
+      monster-list div.monster-nav ul li.active a {
+        display: none; }
+      monster-list div.monster-nav ul li.active span {
+        display: block;
+        padding: 10px 0 10px 40px;
+        font-weight: bold;
+        color: #e8cae8;
+        background-color: #351735;
+        border-bottom: solid 1px #351735; }
+  monster-list div.monster-content {
+    padding-top: 20px; }
+  monster-list div.monster-content--empty-state {
+    padding-top: 20px;
+    text-align: center; }
+/*
+ * Colors
+ */
+/*
+ * Text
+ */
+/*
+ * Layout
+ */
+monster-detail {
+  display: flex;
+  flex-direction: row; }
+  monster-detail > div:first-of-type {
+    padding: 0 20px 20px 20px; }
+  monster-detail .monster-details-card {
+    border: solid 2px #153815; }
+    monster-detail .monster-details-card .monster-details-card-header {
+      background-color: #153815;
+      color: #c7eac7;
+      padding: 20px 14px 10px; }
+    monster-detail .monster-details-card dl {
+      padding: 20px 14px 10px; }
+      monster-detail .monster-details-card dl dt {
+        margin-bottom: 6px;
+        font-size: 20px;
+        font-weight: bold; }
+      monster-detail .monster-details-card dl dd {
+        margin-bottom: 14px; }
+  monster-detail .paper {
+    position: relative;
+    padding: 50px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); }
+  monster-detail .paper:after,
+  monster-detail .paper:before {
+    position: absolute;
+    width: 40%;
+    height: 10px;
+    content: ' ';
+    left: 12px;
+    bottom: 12px;
+    background: transparent;
+    -webkit-transform: skew(-5deg) rotate(-5deg);
+    -moz-transform: skew(-5deg) rotate(-5deg);
+    -ms-transform: skew(-5deg) rotate(-5deg);
+    -o-transform: skew(-5deg) rotate(-5deg);
+    transform: skew(-5deg) rotate(-5deg);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    z-index: -1; }
+  monster-detail .paper:after {
+    left: auto;
+    right: 12px;
+    -webkit-transform: skew(5deg) rotate(5deg);
+    -moz-transform: skew(5deg) rotate(5deg);
+    -ms-transform: skew(5deg) rotate(5deg);
+    -o-transform: skew(5deg) rotate(5deg);
+    transform: skew(5deg) rotate(5deg); }
+/*
+ * Colors
+ */
+/*
+ * Text
+ */
+/*
+ * Layout
+ */
+/*
+ * From http://meyerweb.com/eric/tools/css/reset/
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+body,
+html {
+  color: #112d11 !important;
+  background-color: #e9f7e9 !important;
+  font-size: 16px;
+  font-family: "Space Mono", monospace; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "Concert One", cursive; }
+
+a, a:hover {
+  color: #b14eb1; }
+
+/*# sourceMappingURL=app.43ee1c9c2c382c29714e43b4f1eda0b0.css.map*/

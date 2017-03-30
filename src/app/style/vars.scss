@@ -34,16 +34,24 @@ $white: lighten($brand-primary-neutral, 44%);
 /*
  * Text
  */
+$font-family-sans-serif: 'Concert One', cursive;
+$font-family-serif: 'Space Mono', monospace;
 $font-size-small: 14px;
 $font-size-medium: 16px;
 $font-size-large: 20px;
+$font-size-x-large: 24px;
 
 
 
 /*
  * Layout
  */
-$container-padding-left: 40px;
-$container-padding-right: 40px;
+$mobile-max-width: 767px;
+$tablet-min-width: 768px;
+$tablet-max-width: 1024px;
+
+$site-padding-left: 40px;
+$site-padding-right: 40px;
 
 $content-padding-top: 20px;
+$monster-list-width: 200px;
