@@ -7816,8 +7816,8 @@ var monsters = exports.monsters = [{
     description: 'Shoots octupuses everywhere.',
     image: './img/monsters/delocdago.png'
 }, {
-    id: 'stary-eye',
-    name: 'Stary Eye',
+    id: 'starry-eye',
+    name: 'Starry Eye',
     age: 40,
     origin: 'Austin',
     description: 'Shoots out stars from its eyes.',
@@ -43091,7 +43091,7 @@ $provide.value("$locale", {
 /***/ (function(module, exports) {
 
 var path = '/Users/dylan/dev/monster-browser/src/app/layout/layout.html';
-var html = "<header>\n    <div class=\"container-fluid top-nav\">\n        <div class=\"row\">\n            <div class=\"col-xs-4\">\n                <h1>{{$ctrl.siteMeta.title}}</h1>\n            </div>\n            <div class=\"col-xs-8\">\n                <nav>\n                    <ul>\n                        <li ng-repeat=\"item in $ctrl.menuItems\">\n                            <a href=\"{{item.href}}\">{{item.text}}</a>\n                        </li>\n                    </ul>\n                </nav>\n            </div>\n        </div>\n    </div>\n    <div class=\"lead-in container-fluid\">\n        <span>{{$ctrl.siteMeta.description}}</span>\n    </div>\n</header>\n<main>\n    <div ui-view class=\"container-fluid\"></div>\n</main>\n<footer class=\"container-fluid\">\n    <a href=\"https://github.com/dylanspurgin/monster-browser\">monster-browser</a>\n</footer>\n";
+var html = "<header>\n    <div class=\"top-nav\">\n        <div>\n            <h1>{{$ctrl.siteMeta.title}}</h1>\n        </div>\n        <nav>\n            <ul>\n                <li ng-repeat=\"item in $ctrl.menuItems\">\n                    <a href=\"{{item.href}}\">{{item.text}}</a>\n                </li>\n            </ul>\n        </nav>\n    </div>\n    <div class=\"lead-in\">\n        <span>{{$ctrl.siteMeta.description}}</span>\n    </div>\n</header>\n<main>\n    <div ui-view></div>\n</main>\n<footer>\n    <a href=\"https://github.com/dylanspurgin/monster-browser\">monster-browser</a>\n</footer>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -43100,7 +43100,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = '/Users/dylan/dev/monster-browser/src/app/monster-detail/monster-detail.html';
-var html = "<div class=\"row\">\n    <div class=\"col-xs-8\">\n        <div class=\"paper\">\n            <img src=\"{{$ctrl.monster.image}}\" width=\"400\" />\n        </div>\n    </div>\n    <div class=\"col-xs-4\">\n        <div class=\"monster-details-card\">\n            <div class=\"monster-details-card-header\">\n                <span>{{$ctrl.monster.name}}</span>\n            </div>\n            <dl>\n                <dt>Age</dt>\n                <dd>{{$ctrl.monster.age}}</dd>\n                <dt>Origin</dt>\n                <dd>{{$ctrl.monster.origin}}</dd>\n                <dt>Description</dt>\n                <dd>{{$ctrl.monster.description}}</dd>\n            </dl>\n        </div>\n    </div>\n</div>\n";
+var html = "<div>\n    <div class=\"paper\">\n        <img src=\"{{$ctrl.monster.image}}\" width=\"100%\" />\n    </div>\n</div>\n<div>\n    <div class=\"monster-details-card\">\n        <div class=\"monster-details-card-header\">\n            <span>{{$ctrl.monster.name}}</span>\n        </div>\n        <dl>\n            <dt>Age</dt>\n            <dd>{{$ctrl.monster.age}}</dd>\n            <dt>Origin</dt>\n            <dd>{{$ctrl.monster.origin}}</dd>\n            <dt>Description</dt>\n            <dd>{{$ctrl.monster.description}}</dd>\n        </dl>\n    </div>\n</div>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -43109,7 +43109,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = '/Users/dylan/dev/monster-browser/src/app/monster-list/monster-list.html';
-var html = "<div class=\"row\">\n\n    <!-- left hand nav -->\n    <div class=\"col-xs-3 col-md-2 monster-nav\">\n        <ul>\n            <div class=\"monster-list-heading\">Monsters</div>\n            <li ng-repeat=\"monster in $ctrl.monsters\" ui-sref-active=\"active\">\n                <a ui-sref=\"monsterDetail({ monsterId: monster.id })\"\n                    ng-disabled=\"!monster.active\"\n                    ng-class=\"{ deactivated: !monster.active }\">\n                    {{ monster.name }}\n                </a>\n                <span>\n                    {{ monster.name }}\n                </span>\n            </li>\n        </ul>\n    </div>\n\n    <!-- content -->\n    <div class=\"col-xs-9 col-md-10 monster-content\">\n        <ui-view>\n            <div class=\"monster-content--empty-state\">\n                <h4>Looking for details of cool monsters?</h4>\n                <p>Get started by clicking on a monster name on the left hand side.</p>\n            </div>\n        </ui-view>\n    </div>\n</div>\n";
+var html = "<!-- left hand nav -->\n<div class=\"monster-nav\">\n    <ul>\n        <div class=\"monster-list-heading\">Monsters</div>\n        <li ng-repeat=\"monster in $ctrl.monsters\" ui-sref-active=\"active\">\n            <a ui-sref=\"monsterDetail({ monsterId: monster.id })\" ng-disabled=\"!monster.active\" ng-class=\"{ deactivated: !monster.active }\">\n                    {{ monster.name }}\n                </a>\n            <span>\n                    {{ monster.name }}\n                </span>\n        </li>\n    </ul>\n</div>\n\n<!-- content -->\n<div class=\"monster-content\">\n    <ui-view>\n        <div class=\"monster-content--empty-state\">\n            <h4>Looking for details of cool monsters?</h4>\n            <p>Get started by clicking on a monster name on the left hand side.</p>\n        </div>\n    </ui-view>\n</div>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -43567,4 +43567,4 @@ appModule.config(_app2.html5ModeConfigBlock);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.f4b12c27c1ce9704448a.js.map
+//# sourceMappingURL=app.b8d92859c733b0ba04bb.js.map
