@@ -104,10 +104,14 @@ monster-list {
         background-color: #351735;
         border-bottom: solid 1px #351735; }
   monster-list div.monster-content {
-    padding-top: 20px; }
+    padding-top: 20px;
+    width: 100%; }
   monster-list div.monster-content--empty-state {
     padding-top: 20px;
     text-align: center; }
+    monster-list div.monster-content--empty-state h2 {
+      font-size: 20px;
+      padding-bottom: 14px; }
 /*
  * Colors
  */
@@ -224,4 +228,4 @@ h1, h2, h3, h4, h5 {
 a, a:hover {
   color: #b14eb1; }
 
-/*# sourceMappingURL=app.43ee1c9c2c382c29714e43b4f1eda0b0.css.map*/
+/*# sourceMappingURL=app.8c06b8d6348487346cca4ea65c1a1479.css.map*/

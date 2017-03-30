@@ -43109,7 +43109,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = '/Users/dylan/dev/monster-browser/src/app/monster-list/monster-list.html';
-var html = "<!-- left hand nav -->\n<div class=\"monster-nav\">\n    <ul>\n        <div class=\"monster-list-heading\">Monsters</div>\n        <li ng-repeat=\"monster in $ctrl.monsters\" ui-sref-active=\"active\">\n            <a ui-sref=\"monsterDetail({ monsterId: monster.id })\" ng-disabled=\"!monster.active\" ng-class=\"{ deactivated: !monster.active }\">\n                    {{ monster.name }}\n                </a>\n            <span>\n                    {{ monster.name }}\n                </span>\n        </li>\n    </ul>\n</div>\n\n<!-- content -->\n<div class=\"monster-content\">\n    <ui-view>\n        <div class=\"monster-content--empty-state\">\n            <h4>Looking for details of cool monsters?</h4>\n            <p>Get started by clicking on a monster name on the left hand side.</p>\n        </div>\n    </ui-view>\n</div>\n";
+var html = "<!-- left hand nav -->\n<div class=\"monster-nav\">\n    <ul>\n        <div class=\"monster-list-heading\">Monsters</div>\n        <li ng-repeat=\"monster in $ctrl.monsters\" ui-sref-active=\"active\">\n            <a ui-sref=\"monsterDetail({ monsterId: monster.id })\" ng-disabled=\"!monster.active\" ng-class=\"{ deactivated: !monster.active }\">\n                    {{ monster.name }}\n                </a>\n            <span>\n                    {{ monster.name }}\n                </span>\n        </li>\n    </ul>\n</div>\n\n<!-- content -->\n<div class=\"monster-content\">\n    <ui-view>\n        <div class=\"monster-content--empty-state\">\n            <h2>Looking for details of cool monsters?</h2>\n            <p>Get started by clicking on a monster name on the left hand side.</p>\n        </div>\n    </ui-view>\n</div>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -43567,4 +43567,4 @@ appModule.config(_app2.html5ModeConfigBlock);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.b8d92859c733b0ba04bb.js.map
+//# sourceMappingURL=app.7333b7731e606f33dbfc.js.map

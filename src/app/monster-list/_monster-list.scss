@@ -66,9 +66,14 @@ monster-list {
 
     div.monster-content {
         padding-top: $content-padding-top;
+        width: 100%;
     }
 
     div.monster-content--empty-state {
+        h2 {
+            font-size: $font-size-large;
+            padding-bottom: 14px;
+        }
         padding-top: $content-padding-top;
         text-align: center;
     }
