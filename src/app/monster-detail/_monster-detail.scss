@@ -1,17 +1,45 @@
-monster-detail {
-    display: flex;
-    flex-direction: row;
 
-    &>div:first-of-type {
-        padding: 0 20px 20px 20px;
+// Mobile
+@media (max-width: $mobile-max-width) {
+    monster-detail {
+        display: flex;
+        flex-direction: column;
+
+        .monster-details-card {
+            order: 0;
+        }
+
+        .monster-details-image {
+            order: 1;
+            padding-top: $content-padding-top;
+            padding-bottom: $content-padding-bottom;
+        }
+
     }
+}
 
+// Tablet & Desktop
+@media (min-width: $tablet-min-width) {
+    monster-detail {
+        display: flex;
+        flex-direction: row;
+
+        .monster-details-image {
+            padding: 0 20px 20px 20px;
+        }
+    }
+}
+
+monster-detail {
     .monster-details-card {
-        border: solid 2px $brand-primary-neutral-dark;
+        border: solid 2px $brand-primary-dark;
 
         .monster-details-card-header {
-            background-color: $brand-primary-neutral-dark;
-            color: $brand-primary-neutral-light;
+            background-color: $brand-primary-dark;
+            font-family: $font-family-sans-serif;
+            text-transform: uppercase;
+            font-size: $font-size-large;
+            color: $brand-secondary-1;
             padding: 20px 14px 10px;
         }
 
@@ -21,6 +49,14 @@ monster-detail {
                 margin-bottom: 6px;
                 font-size: $font-size-large;
                 font-weight: bold;
+            }
+            @media (max-width: $mobile-max-width) {
+                dt {
+                    margin-bottom: 2px;
+                    font-size: $font-size-medium;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
             }
             dd {
                 margin-bottom: 14px;

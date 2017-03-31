@@ -1,4 +1,4 @@
-$header-height: 60px;
+$header-height: 120px;
 $footer-height: 40px;
 
 html {
@@ -12,23 +12,26 @@ html {
 
 layout {
     header {
-        background-color: $brand-primary-neutral-dark;
+        background-color: $brand-primary-dark;
 
         .top-nav {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
 
             height: $header-height;
-            line-height: $header-height;
 
             padding-left: $site-padding-left;
             padding-right: $site-padding-right;
 
+            background-image: url('/img/monster-header.png');
+            background-position: right bottom;
+            background-repeat: no-repeat;
+
             div {
                 h1 {
-                    color: $brand-primary-neutral-light;
-                    font-size: $font-size-large;
+                    color: $brand-secondary-1;
+                    font-size: $font-size-xx-large;
                     text-transform: uppercase;
                 }
             }
@@ -36,14 +39,19 @@ layout {
             nav {
                 ul {
                     list-style-type: none;
-                    line-height: $header-height;
                 }
             }
         }
 
+        @media (max-width: $mobile-max-width) {
+            .top-nav {
+                background-position: left bottom;
+            }
+        }
+
         .lead-in {
-            background-color: $brand-primary-neutral-light;
-            color: $brand-primary-neutral-dark;
+            background-color: $brand-secondary-1-light;
+            color: $brand-primary-dark;
             padding-top: 20px;
             padding-bottom: 20px;
             padding-left: $site-padding-left;
@@ -57,19 +65,25 @@ layout {
         padding-right: $site-padding-right;
     }
 
+    @media (max-width: $mobile-max-width) {
+        main {
+            padding-left: $site-padding-left;
+        }
+    }
+
     footer {
         position: absolute;
         bottom: 0;
         width: 100%;
-        padding-left: $site-padding-left;
-        padding-right: $site-padding-right;
         height: $footer-height;
         line-height: $footer-height;
-        background-color: $brand-primary-neutral-dark;
+        background-color: $brand-primary-dark;
 
-        a, a:hover {
-            color: $brand-primary-neutral-light;
+        .footer-links {
+            padding-left: $site-padding-left;
+            padding-right: $site-padding-right;
         }
+
     }
 
 }

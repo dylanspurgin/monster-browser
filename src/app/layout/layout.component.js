@@ -4,12 +4,12 @@ require('./_layout.scss');
 function LayoutController () {
     this.siteMeta = {
         title: 'Monster Browser',
-        description: 'A component-based Angular 1.6 app disguised as a monster browser. With artwork by my daughter, Annalouise.'
+        description: 'A responsive, component-based Angular 1.6 app disguised as a monster browser. With artwork by my daughter, Annalouise.'
     }
 
     this.menuItems = [
         {
-            text: 'browse on github',
+            text: 'view on github',
             href: 'https://github.com/dylanspurgin/monster-browser'
         }
     ]

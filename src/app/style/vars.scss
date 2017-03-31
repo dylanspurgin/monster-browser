@@ -1,33 +1,44 @@
 /*
  * Colors
  */
-$red: 	 hsl(355, 100%, 50%);
-$orange: hsl(20, 100%, 50%);
-$yellow: hsl(60, 100%, 50%);
-$green:  hsl(120, 100%, 50%);
-$cyan:   hsl(180, 100%, 50%);
-$blue:   hsl(240, 100%, 50%);
-$violet: hsl(300, 100%, 50%);
+$color-primary-0: #2E4272;	// Main Primary color - BLUE */
+$color-primary-1: #1140AE;
+$color-primary-2: #23448F;
+$color-primary-3: #2F3B54;
+$color-primary-4: #282C37;
+
+$color-secondary-1-0: #AA9439;	// Main Secondary color (1) - YELLOW */
+$color-secondary-1-1: #FFCE00;
+$color-secondary-1-2: #D6B321;
+$color-secondary-1-3: #7E7240;
+$color-secondary-1-4: #524D38;
+
+$color-secondary-2-0: #AA7039;	// Main Secondary color (2) - ORANGE */
+$color-secondary-2-1: #FF7C00;
+$color-secondary-2-2: #D67A21;
+$color-secondary-2-3: #7E5E40;
+$color-secondary-2-4: #524538;
 
 // Starting colors
-$first-color: $green;
-$second-color: complement($first-color);
+$brand-primary: $color-primary-1;
+$brand-secondary-1: $color-secondary-1-1;
+$brand-secondary-2: $color-secondary-2-1;
 
 // Primary shades
-$brand-primary: harmonize($first-color, $second-color);
-$brand-primary-neutral: neutral($brand-primary);
-$brand-primary-neutral-light: lighten($brand-primary-neutral, 35%);
-$brand-primary-neutral-dark: darken($brand-primary-neutral, 35%);
+$brand-primary-light: lighten(desaturate($brand-primary, 45%), 25%);
+$brand-primary-dark: saturate($brand-primary, 25%);
 
-// Secondary shades
-$brand-secondary: harmonize($second-color, $first-color);
-$brand-secondary-neutral: neutral($brand-secondary);
-$brand-secondary-neutral-light: lighten($brand-secondary-neutral, 35%);
-$brand-secondary-neutral-dark: darken($brand-secondary-neutral, 35%);
+// Secondary 1 shades
+$brand-secondary-1-light: lighten(desaturate($brand-secondary-1, 25%), 40%);
+$brand-secondary-1-dark: darken($brand-secondary-1, 25%);
+
+// Secondary 2 shades
+$brand-secondary-2-light: lighten(desaturate($brand-secondary-2, 15%), 40%);
+$brand-secondary-2-dark: darken($brand-secondary-2, 25%);
 
 // Black & white
-$black: darken($brand-primary-neutral, 38%);
-$white: lighten($brand-primary-neutral, 44%);
+$black: darken($brand-primary, 38%);
+$white: lighten($brand-primary, 62%);
 
 
 
@@ -40,6 +51,7 @@ $font-size-small: 14px;
 $font-size-medium: 16px;
 $font-size-large: 20px;
 $font-size-x-large: 24px;
+$font-size-xx-large: 32px;
 
 
 
@@ -54,4 +66,8 @@ $site-padding-left: 40px;
 $site-padding-right: 40px;
 
 $content-padding-top: 20px;
+$content-padding-right: 20px;
+$content-padding-bottom: 20px;
+$content-padding-left: 20px;
+
 $monster-list-width: 200px;

@@ -1,68 +1,168 @@
-monster-list {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
+// Mobile
+@media (max-width: $mobile-max-width) {
+    monster-list {
+        display: flex;
+        flex-direction: column;
 
-    div.monster-nav {
-        min-width: $monster-list-width;
-        padding-top: $content-padding-top;
+        div.monster-nav {
 
-        ul {
-            height: 100%;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+            padding-top: $content-padding-top;
 
-            .monster-list-heading {
-                text-transform: uppercase;
-                text-align: center;
-                font-size: $font-size-large;
-                padding-bottom: 8px;
-            }
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
 
-            li {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
 
-                a {
-                    display: block;
-                    text-decoration: none;
-                    padding: 10px 0 10px $site-padding-left;
-                    background-color: $brand-secondary-neutral-light;
-                    color: $brand-secondary-neutral-dark;
-                    border-bottom: solid 1px $brand-secondary-neutral;
-                }
-                a:hover {
-                    text-decoration: none;
-                    color: $brand-secondary-neutral-dark;
-                    background-color: $brand-secondary-neutral;
-                }
-                span {
+                .monster-list-heading {
                     display: none;
                 }
-            }
 
-            li:last-of-type a {
-                border-bottom: none;
-            }
+                li {
 
-            li.active {
+                    .menu-item {
+                        padding: 10px 4px;
+                        text-decoration: none;
+                        text-align: center;
+                    }
 
-                a {
-                    display: none;
+                    a {
+                        display: block;
+                        background-color: $brand-secondary-2-light;
+                        color: $brand-secondary-2-dark;
+
+                    }
+                    a:hover {
+                        text-decoration: none;
+                        color: $brand-secondary-2-dark;
+                        background-color: $brand-secondary-2;
+                    }
+                    span {
+                        display: none;
+                    }
                 }
-                span {
-                    display: block;
-                    padding: 10px 0 10px $site-padding-left;
-                    font-weight: bold;
-                    color: $brand-secondary-neutral-light;
-                    background-color: $brand-secondary-neutral-dark;
-                    border-bottom: solid 1px $brand-secondary-neutral-dark;
+
+                li:last-of-type a {
+                    border-bottom: none;
                 }
+
+                li.active {
+
+                    a {
+                        display: none;
+                    }
+
+                    @media (min-width: $tablet-min-width) {
+                        span:before {
+                            content: '>';
+                        }
+                        span:after {
+                            content: '<';
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        font-weight: bold;
+                        color: $brand-secondary-2-light;
+                        background-color: $brand-secondary-2;
+                    }
+
+                }
+
             }
 
         }
 
     }
+}
 
+// Tablet and larger
+@media (min-width: $tablet-min-width) {
+    monster-list {
+        display: flex;
+        flex-direction: row;
+
+        div.monster-nav {
+            min-width: $monster-list-width;
+            padding-top: $content-padding-top;
+
+            ul {
+                height: 100%;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                .monster-list-heading {
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: $font-size-large;
+                    padding-bottom: 8px;
+                }
+
+                li {
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        padding: 10px 0 10px $site-padding-left;
+                        background-color: $brand-secondary-2-light;
+                        color: $brand-secondary-2-dark;
+                        border-bottom: solid 1px $brand-secondary-2;
+                    }
+                    a:hover {
+                        text-decoration: none;
+                        color: $brand-secondary-2-dark;
+                        background-color: $brand-secondary-2;
+                    }
+                    span {
+                        display: none;
+                    }
+                }
+
+                li:last-of-type a {
+                    border-bottom: none;
+                }
+
+                li.active {
+
+                    a {
+                        display: none;
+                    }
+                    span:before {
+                        content: '>';
+                    }
+                    span {
+
+                        display: block;
+                        padding: 10px 0 10px 20px;
+                        font-weight: bold;
+                        color: $brand-secondary-2-light;
+                        background-color: $brand-secondary-2;
+                        border-bottom: solid 1px $brand-secondary-2;
+                    }
+                    span:after {
+                        content: '<';
+                    }
+                }
+
+            }
+
+        }
+
+        div.monster-content {
+            padding-left: $content-padding-left;
+        }
+
+    }
+}
+
+monster-list {
+    height: 100%;
 
     div.monster-content {
         padding-top: $content-padding-top;
@@ -70,6 +170,12 @@ monster-list {
     }
 
     div.monster-content--empty-state {
+        background-color: $brand-secondary-1-light;
+        border: solid 1px $brand-secondary-1-dark;
+        border-radius: 5px;
+
+        padding: 20px;
+
         h2 {
             font-size: $font-size-large;
             padding-bottom: 14px;
