@@ -93,6 +93,12 @@ module.exports = function makeWebpackConfig() {
                             }
                         },
                         {
+                            loader: 'postcss-loader',
+                            query: {
+                                sourceMap: true
+                            }
+                        },
+                        {
                             loader: 'sass-loader',
                             query: {
                                 sourceMap: true
@@ -114,6 +120,12 @@ module.exports = function makeWebpackConfig() {
                     extractSass.extract({
                         loader: [{
                                 loader: 'css-loader',
+                                query: {
+                                    sourceMap: true
+                                }
+                            },
+                            {
+                                loader: 'postcss-loader',
                                 query: {
                                     sourceMap: true
                                 }

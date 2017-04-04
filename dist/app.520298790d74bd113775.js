@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 86);
+/******/ 	return __webpack_require__(__webpack_require__.s = 87);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1017,17 +1017,17 @@ exports.services = services;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(72));
-__export(__webpack_require__(79));
+__export(__webpack_require__(73));
 __export(__webpack_require__(80));
 __export(__webpack_require__(81));
 __export(__webpack_require__(82));
 __export(__webpack_require__(83));
 __export(__webpack_require__(84));
 __export(__webpack_require__(85));
+__export(__webpack_require__(86));
 __export(__webpack_require__(30));
 __export(__webpack_require__(35));
-__export(__webpack_require__(78));
+__export(__webpack_require__(79));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -3171,7 +3171,7 @@ var angular_1 = __webpack_require__(7);
 var ui_router_core_1 = __webpack_require__(4);
 var views_1 = __webpack_require__(21);
 var templateFactory_1 = __webpack_require__(62);
-var stateProvider_1 = __webpack_require__(29);
+var stateProvider_1 = __webpack_require__(28);
 var onEnterExitRetain_1 = __webpack_require__(61);
 var locationServices_1 = __webpack_require__(59);
 var urlRouterProvider_1 = __webpack_require__(63);
@@ -4434,11 +4434,11 @@ exports.Transition = Transition;
 var interface_1 = __webpack_require__(11);
 var transition_1 = __webpack_require__(26);
 var hookRegistry_1 = __webpack_require__(25);
-var resolve_1 = __webpack_require__(75);
-var views_1 = __webpack_require__(77);
-var url_1 = __webpack_require__(76);
-var redirectTo_1 = __webpack_require__(74);
-var onEnterExitRetain_1 = __webpack_require__(73);
+var resolve_1 = __webpack_require__(76);
+var views_1 = __webpack_require__(78);
+var url_1 = __webpack_require__(77);
+var redirectTo_1 = __webpack_require__(75);
+var onEnterExitRetain_1 = __webpack_require__(74);
 var lazyLoad_1 = __webpack_require__(31);
 var transitionEventType_1 = __webpack_require__(42);
 var transitionHook_1 = __webpack_require__(13);
@@ -4669,35 +4669,6 @@ exports.TransitionService = TransitionService;
 
 "use strict";
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.monstersService = monstersService;
-function monstersService(Monsters) {
-    var publicApi = {
-        getById: getById
-    };
-
-    function getById(monsterId) {
-        var match = void 0;
-        Monsters.forEach(function (monster) {
-            if (monsterId == monster.id) {
-                match = monster;
-            }
-        });
-        return match;
-    }
-
-    return publicApi;
-}
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 /** @module ng1 */ /** for typedoc */
 var ui_router_core_1 = __webpack_require__(4);
 /**
@@ -4843,6 +4814,35 @@ var StateProvider = (function () {
 }());
 exports.StateProvider = StateProvider;
 //# sourceMappingURL=stateProvider.js.map
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.monstersService = monstersService;
+function monstersService(Monsters) {
+    var publicApi = {
+        getById: getById
+    };
+
+    function getById(monsterId) {
+        var match = void 0;
+        Monsters.forEach(function (monster) {
+            if (monsterId == monster.id) {
+                match = monster;
+            }
+        });
+        return match;
+    }
+
+    return publicApi;
+}
 
 /***/ }),
 /* 30 */
@@ -7644,7 +7644,7 @@ exports.core = core;
 __export(__webpack_require__(4));
 __export(__webpack_require__(20));
 __export(__webpack_require__(21));
-__export(__webpack_require__(29));
+__export(__webpack_require__(28));
 __webpack_require__(58);
 __webpack_require__(56);
 __webpack_require__(60);
@@ -7684,7 +7684,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.monsterDetailState = exports.monsterListState = exports.appState = undefined;
 
-var _monsters = __webpack_require__(28);
+var _monsters = __webpack_require__(29);
 
 var appState = exports.appState = {
     name: 'app',
@@ -7723,8 +7723,8 @@ var monsterDetailState = exports.monsterDetailState = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var template = __webpack_require__(69);
-__webpack_require__(66);
+var template = __webpack_require__(70);
+__webpack_require__(67);
 
 function LayoutController() {
     this.siteMeta = {
@@ -7753,8 +7753,8 @@ var layout = exports.layout = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var template = __webpack_require__(70);
-__webpack_require__(67);
+var template = __webpack_require__(71);
+__webpack_require__(68);
 
 function MonsterDetailController() {
     // no op
@@ -7778,8 +7778,8 @@ var monsterDetail = exports.monsterDetail = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var template = __webpack_require__(71);
-__webpack_require__(68);
+var template = __webpack_require__(72);
+__webpack_require__(69);
 
 MonsterListController.$inject = ['Monsters'];
 function MonsterListController(Monsters) {
@@ -7799,30 +7799,20 @@ var monsterList = exports.monsterList = {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-var monsters = exports.monsters = [{
-    id: 'smeary',
-    name: 'Smeary',
-    age: 30,
-    origin: 'California',
-    description: 'Smears everything that he sees.',
-    image: './img/monsters/smeary.png'
-}, {
-    id: 'delocdago',
-    name: 'Delocdago',
-    age: 40,
-    origin: 'California',
-    description: 'Shoots octupuses everywhere.',
-    image: './img/monsters/delocdago.png'
-}, {
-    id: 'starry-eye',
-    name: 'Starry Eye',
-    age: 40,
-    origin: 'Austin',
-    description: 'Shoots out stars from its eyes.',
-    image: './img/monsters/stary-eye.png'
-}];
+exports.monstersModule = undefined;
+
+var _monsters = __webpack_require__(66);
+
+var _monsters2 = __webpack_require__(29);
+
+var monstersModule = angular.module('monstersModule', []);
+
+monstersModule.constant('Monsters', _monsters.monsters);
+monstersModule.factory('monstersService', _monsters2.monstersService);
+
+exports.monstersModule = monstersModule;
 
 /***/ }),
 /* 55 */
@@ -43070,9 +43060,36 @@ $provide.value("$locale", {
 
 /***/ }),
 /* 66 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var monsters = exports.monsters = [{
+    id: 'smeary',
+    name: 'Smeary',
+    age: 30,
+    origin: 'California',
+    description: 'Smears everything that he sees.',
+    image: './img/monsters/smeary.png'
+}, {
+    id: 'delocdago',
+    name: 'Delocdago',
+    age: 40,
+    origin: 'California',
+    description: 'Shoots octupuses everywhere.',
+    image: './img/monsters/delocdago.png'
+}, {
+    id: 'starry-eye',
+    name: 'Starry Eye',
+    age: 40,
+    origin: 'Austin',
+    description: 'Shoots out stars from its eyes.',
+    image: './img/monsters/stary-eye.png'
+}];
 
 /***/ }),
 /* 67 */
@@ -43090,13 +43107,19 @@ $provide.value("$locale", {
 /* 69 */
 /***/ (function(module, exports) {
 
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports) {
+
 var path = '/Users/dylan/dev/monster-browser/src/app/layout/layout.html';
 var html = "<header>\n    <div class=\"top-nav\">\n        <div>\n            <h1>{{$ctrl.siteMeta.title}}</h1>\n        </div>\n        <nav>\n            <ul>\n                <li ng-repeat=\"item in $ctrl.menuItems\">\n                    <a href=\"{{item.href}}\">{{item.text}}</a>\n                </li>\n            </ul>\n        </nav>\n    </div>\n    <div class=\"lead-in\">\n        <span>{{$ctrl.siteMeta.description}}</span>\n    </div>\n</header>\n<main>\n    <div ui-view></div>\n</main>\n<footer>\n    <div class=\"footer-links\">\n        <a href=\"https://github.com/dylanspurgin/monster-browser\">monster-browser</a>\n    </div>\n</footer>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports) {
 
 var path = '/Users/dylan/dev/monster-browser/src/app/monster-detail/monster-detail.html';
@@ -43105,7 +43128,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports) {
 
 var path = '/Users/dylan/dev/monster-browser/src/app/monster-list/monster-list.html';
@@ -43114,7 +43137,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43134,7 +43157,7 @@ __export(__webpack_require__(8));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43195,7 +43218,7 @@ exports.registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43237,7 +43260,7 @@ exports.registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43284,7 +43307,7 @@ exports.registerLazyResolveState = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43314,7 +43337,7 @@ exports.registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43366,7 +43389,7 @@ exports.registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43391,7 +43414,7 @@ exports.UIRouterPluginBase = UIRouterPluginBase;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43406,7 +43429,7 @@ __export(__webpack_require__(23));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43420,7 +43443,7 @@ __export(__webpack_require__(16));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43435,7 +43458,7 @@ __export(__webpack_require__(17));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43453,7 +43476,7 @@ __export(__webpack_require__(6));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43484,7 +43507,7 @@ __export(__webpack_require__(27));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43500,7 +43523,7 @@ __export(__webpack_require__(46));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43512,7 +43535,7 @@ __export(__webpack_require__(47));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43527,8 +43550,6 @@ var _angularUiRouter = __webpack_require__(48);
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
 var _monsters = __webpack_require__(54);
-
-var _monsters2 = __webpack_require__(28);
 
 var _layout = __webpack_require__(51);
 
@@ -43546,10 +43567,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 __webpack_require__(55); // Main app stylesheet
 
-var appModule = angular.module('appModule', [_angularUiRouter2.default]);
-
-appModule.constant('Monsters', _monsters.monsters);
-appModule.factory('monstersService', _monsters2.monstersService);
+var appModule = angular.module('appModule', [_angularUiRouter2.default, _monsters.monstersModule.name]);
 
 // TODO - Register components in the component directories
 appModule.component('layout', _layout.layout);
@@ -43567,4 +43585,4 @@ appModule.config(_app2.html5ModeConfigBlock);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.ac4baa58026e470b6e12.js.map
+//# sourceMappingURL=app.520298790d74bd113775.js.map
