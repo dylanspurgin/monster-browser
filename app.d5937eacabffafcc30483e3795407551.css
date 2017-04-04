@@ -16,9 +16,12 @@ html {
 layout header {
   background-color: #0039bf; }
   layout header .top-nav {
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
     height: 120px;
     padding-left: 40px;
     padding-right: 40px;
@@ -71,15 +74,21 @@ layout footer {
  */
 @media (max-width: 767px) {
   monster-list {
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column; }
+    -ms-flex-direction: column;
+        flex-direction: column; }
     monster-list div.monster-nav {
       padding-top: 20px; }
       monster-list div.monster-nav ul {
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-align: stretch;
+            align-items: stretch;
         list-style-type: none;
         margin: 0;
         padding: 0; }
@@ -118,8 +127,10 @@ layout footer {
 
 @media (min-width: 768px) {
   monster-list {
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row; }
+    -ms-flex-direction: row;
+        flex-direction: row; }
     monster-list div.monster-nav {
       min-width: 200px;
       padding-top: 20px; }
@@ -190,19 +201,25 @@ monster-list {
  */
 @media (max-width: 767px) {
   monster-detail {
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column; }
+    -ms-flex-direction: column;
+        flex-direction: column; }
     monster-detail .monster-details-card {
-      order: 0; }
+      -ms-flex-order: 0;
+          order: 0; }
     monster-detail .monster-details-image {
-      order: 1;
+      -ms-flex-order: 1;
+          order: 1;
       padding-top: 20px;
       padding-bottom: 20px; } }
 
 @media (min-width: 768px) {
   monster-detail {
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row; }
+    -ms-flex-direction: row;
+        flex-direction: row; }
     monster-detail .monster-details-image {
       padding: 0 20px 20px 20px; } }
 
@@ -234,8 +251,6 @@ monster-detail .paper {
   position: relative;
   padding: 50px;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); }
 
 monster-detail .paper:after,
@@ -247,23 +262,13 @@ monster-detail .paper:before {
   left: 12px;
   bottom: 12px;
   background: transparent;
-  -webkit-transform: skew(-5deg) rotate(-5deg);
-  -moz-transform: skew(-5deg) rotate(-5deg);
-  -ms-transform: skew(-5deg) rotate(-5deg);
-  -o-transform: skew(-5deg) rotate(-5deg);
   transform: skew(-5deg) rotate(-5deg);
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   z-index: -1; }
 
 monster-detail .paper:after {
   left: auto;
   right: 12px;
-  -webkit-transform: skew(5deg) rotate(5deg);
-  -moz-transform: skew(5deg) rotate(5deg);
-  -ms-transform: skew(5deg) rotate(5deg);
-  -o-transform: skew(5deg) rotate(5deg);
   transform: skew(5deg) rotate(5deg); }
 /*
  * Colors
@@ -331,4 +336,4 @@ a, a:hover {
   .hidden-desktop {
     display: none; } }
 
-/*# sourceMappingURL=app.a77619dfa935f651b42db152e8fa0f08.css.map*/
+/*# sourceMappingURL=app.d5937eacabffafcc30483e3795407551.css.map*/
