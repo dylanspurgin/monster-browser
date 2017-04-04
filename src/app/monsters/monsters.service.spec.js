@@ -1,14 +1,29 @@
-import monstersService from './monsters.service';
-
 describe('monstersService', () => {
 
-    let monstersMock;
+    let monstersService, monstersMock, monsterOne, monsterTwo;
 
     beforeEach(() => {
-        const monsterOne = { id: 456, name: 'four five six'};
-        const monsterTwo = { id: 789, name: 'seven eight nine'};
+
+        // Mock monsters constants
+        const monsterOne = {
+            id: 456,
+            name: 'four five six'
+        };
+        const monsterTwo = {
+            id: 789,
+            name: 'seven eight nine'
+        };
         monstersMock = [monsterOne, monsterTwo];
+
+
     });
+
+    beforeEach(angular.mock.module('monstersModule'));
+
+    beforeEach(inject(function(_monstersService_) {
+        monstersService = _monstersService_;
+    }));
+
 
     describe('getById', () => {
 

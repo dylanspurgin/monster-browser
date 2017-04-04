@@ -3,8 +3,7 @@ import uiRouter from 'angular-ui-router';
 
 require('./style/app.scss'); // Main app stylesheet
 
-import {monsters} from './monsters/monsters.constants';
-import {monstersService} from './monsters/monsters.service';
+import {monstersModule} from './monsters/monsters.module';
 
 import {layout} from './layout/layout.component';
 import {monsterList} from './monster-list/monster-list.component';
@@ -12,10 +11,8 @@ import {monsterDetail} from './monster-detail/monster-detail.component';
 import {appState, monsterListState, monsterDetailState} from './app.states';
 import {otherwiseConfigBlock, html5ModeConfigBlock} from './app.config';
 
-const appModule = angular.module('appModule', [uiRouter]);
+const appModule = angular.module('appModule', [uiRouter, monstersModule.name]);
 
-appModule.constant('Monsters', monsters);
-appModule.factory('monstersService', monstersService);
 
 // TODO - Register components in the component directories
 appModule.component('layout', layout);

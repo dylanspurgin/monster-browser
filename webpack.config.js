@@ -85,8 +85,8 @@ module.exports = function makeWebpackConfig() {
                 exclude: /node_modules/
             }, {
                 test: /\.scss$/,
-                loader: isTest ? 'style-loader' : extractSass.extract({
-                    loader: [{
+                loader: isTest ?
+                    [{
                             loader: 'css-loader',
                             query: {
                                 sourceMap: true
@@ -110,8 +110,34 @@ module.exports = function makeWebpackConfig() {
                                 ]
                             },
                         }
-                    ],
-                })
+                    ] :
+                    extractSass.extract({
+                        loader: [{
+                                loader: 'css-loader',
+                                query: {
+                                    sourceMap: true
+                                }
+                            },
+                            {
+                                loader: 'sass-loader',
+                                query: {
+                                    sourceMap: true
+                                }
+                            },
+                            {
+                                loader: 'sass-resources-loader',
+                                query: {
+                                    resources: [
+                                        './node_modules/sass-lumen/sass/_introspection.scss',
+                                        './node_modules/sass-lumen/sass/_harmony.scss',
+                                        './node_modules/sass-lumen/sass/_tint-shade.scss',
+                                        './src/app/style/_neutral.scss',
+                                        './src/app/style/vars.scss'
+                                    ]
+                                }
+                            }
+                        ]
+                    })
             }, {
                 // ASSET LOADER
                 // Reference: https://github.com/webpack/file-loader
