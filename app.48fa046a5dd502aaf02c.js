@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "./monster-browser";
+/******/ 	__webpack_require__.p = "/monster-browser";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 87);
@@ -7729,7 +7729,7 @@ __webpack_require__(67);
 function LayoutController() {
     this.siteMeta = {
         title: 'Monster Browser',
-        description: 'A responsive, component-based Angular 1.6 app disguised as a monster browser. With artwork by my daughter, Annalouise.'
+        description: 'A responsive, component-based Angular 1.6 app disguised as a monster browser. With artwork by my daughter.'
     };
 
     this.menuItems = [{
@@ -43585,4 +43585,4 @@ appModule.config(_app2.html5ModeConfigBlock);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.d2093c311c17979660ab.js.map
+//# sourceMappingURL=app.48fa046a5dd502aaf02c.js.map
