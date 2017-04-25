@@ -200,7 +200,7 @@ module.exports = function makeWebpackConfig() {
         config.plugins.push(
             new HtmlWebpackPlugin({
                 template: './src/index.ejs',
-                baseUrl: isProd ? '/monster-browser/' : '/',
+                baseUrl: '/',
                 inject: 'body'
             }),
             extractSass
