@@ -9,7 +9,7 @@ import {layout} from './layout/layout.component';
 import {monsterList} from './monster-list/monster-list.component';
 import {monsterDetail} from './monster-detail/monster-detail.component';
 import {appState, monsterListState, monsterDetailState} from './app.states';
-import {otherwiseConfigBlock, html5ModeConfigBlock} from './app.config';
+import {otherwiseConfigBlock} from './app.config';
 
 const appModule = angular.module('appModule', [uiRouter, monstersModule.name]);
 
@@ -27,4 +27,3 @@ appModule.config(['$stateProvider', $stateProvider => {
 }]);
 
 appModule.config(otherwiseConfigBlock);
-appModule.config(html5ModeConfigBlock);
