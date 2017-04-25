@@ -25,7 +25,7 @@ layout header {
     height: 120px;
     padding-left: 40px;
     padding-right: 40px;
-    background-image: url("/img/monster-header.png");
+    background-image: url("./img/monster-header.png");
     background-position: right bottom;
     background-repeat: no-repeat; }
     layout header .top-nav div h1 {
@@ -336,4 +336,4 @@ a, a:hover {
   .hidden-desktop {
     display: none; } }
 
-/*# sourceMappingURL=app.d5937eacabffafcc30483e3795407551.css.map*/
+/*# sourceMappingURL=app.cd34317b8e26b672b748ac2121a6219e.css.map*/
