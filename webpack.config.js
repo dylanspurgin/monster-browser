@@ -18,7 +18,7 @@ var isProd = ENV === 'build';
 const extractSass = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
     disable: process.env.NODE_ENV === "development",
-    root: isProd ? '/public/' : null
+    root: isProd ? '/public/' : '/monster-browser/'
 });
 
 module.exports = function makeWebpackConfig() {
