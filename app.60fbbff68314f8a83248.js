@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/monster-browser";
+/******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 87);
@@ -43580,4 +43580,4 @@ appModule.config(_app2.otherwiseConfigBlock);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.7101062081a0f7286630.js.map
+//# sourceMappingURL=app.60fbbff68314f8a83248.js.map
