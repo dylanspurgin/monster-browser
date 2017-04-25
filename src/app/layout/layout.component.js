@@ -4,7 +4,7 @@ require('./_layout.scss');
 function LayoutController () {
     this.siteMeta = {
         title: 'Monster Browser',
-        description: 'A responsive, component-based Angular 1.6 app disguised as a monster browser. With artwork by my daughter, Annalouise.'
+        description: 'A responsive, component-based Angular 1.6 app disguised as a monster browser. With artwork by my daughter.'
     }
 
     this.menuItems = [
