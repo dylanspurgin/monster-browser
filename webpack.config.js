@@ -200,7 +200,7 @@ module.exports = function makeWebpackConfig() {
         config.plugins.push(
             new HtmlWebpackPlugin({
                 template: './src/index.ejs',
-                baseUrl: '/',
+                baseUrl: './',
                 inject: 'body'
             }),
             extractSass
