@@ -42,7 +42,7 @@ module.exports = function makeWebpackConfig() {
 
         // Output path from the view of the page
         // Uses webpack-dev-server in development
-        publicPath: isProd ? '/monster-browser' : 'http://localhost:8080/',
+        publicPath: isProd ? './' : 'http://localhost:8080/',
 
         // Filename for entry points
         // Only adds hash in build mode
@@ -200,7 +200,7 @@ module.exports = function makeWebpackConfig() {
         config.plugins.push(
             new HtmlWebpackPlugin({
                 template: './src/index.ejs',
-                baseUrl: './',
+                baseUrl: isProd ? '/monster-browser/' : '/',
                 inject: 'body'
             }),
             extractSass
