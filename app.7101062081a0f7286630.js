@@ -7668,10 +7668,6 @@ var otherwiseConfigBlock = exports.otherwiseConfigBlock = ['$urlRouterProvider',
     $urlRouterProvider.otherwise("/monsters");
 }];
 
-var html5ModeConfigBlock = exports.html5ModeConfigBlock = ['$locationProvider', function ($locationProvider) {
-    $locationProvider.html5Mode(true);
-}];
-
 /***/ }),
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -43581,8 +43577,7 @@ appModule.config(['$stateProvider', function ($stateProvider) {
 }]);
 
 appModule.config(_app2.otherwiseConfigBlock);
-appModule.config(_app2.html5ModeConfigBlock);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=app.48fa046a5dd502aaf02c.js.map
+//# sourceMappingURL=app.7101062081a0f7286630.js.map
